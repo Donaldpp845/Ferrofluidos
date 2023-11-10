@@ -1,0 +1,75 @@
+.panel {
+  background-color:   #a10000;
+  color: #fff;
+  width: 120px; /* Ancho del panel */
+  height: 100%; /* Altura completa del panel */
+  position: fixed; /* Mantener el panel fijo mientras se desplaza */
+  top: 0;
+  left: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Alinear elementos verticalmente */
+}
+
+.panel-logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.panel-links {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1; /* Permite que los enlaces ocupen todo el espacio disponible */
+}
+
+.panel-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+
+.panel-icon {
+  margin-right: 10px;
+}
+
+.panel-link {
+  text-decoration: none;
+  color: #fdfdfd; /* Color de texto normal */
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Transición suave para color y transformación */
+  position: relative;
+}
+
+.panel-link::before {
+  content: '';
+  position: absolute;
+  bottom: -3px; /* Mueve el subrayado hacia abajo ligeramente */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.panel-link:hover {
+  color: gold; /* Cambia el color del texto al pasar el mouse */
+  transform: scale(1.05); /* Hace que el texto sea ligeramente más grande */
+}
+
+.panel-link:hover::before {
+  transform: scaleX(1);
+  background-color: gold; /* Cambia el color del subrayado al pasar el mouse */
+}
+

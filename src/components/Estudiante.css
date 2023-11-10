@@ -1,0 +1,55 @@
+/* Estilos CSS */
+.estudiante {
+  display: flex;
+  margin-left: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.vaso {
+  position: relative;
+  width: 100px;
+  height: 200px;
+  background-color: #00f;
+  border: 2px solid #000;
+}
+
+.agua {
+  background-color: #00f;
+  height: 80%;
+  width: 100%;
+  position: relative;
+}
+
+.bolita {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(82, 82, 82);
+  border-radius: 50%;
+  transition: transform 0.1s ease-in-out; /* Cambiamos la duración de la animación a 0.1s */
+}
+
+/* Definir la animación de parpadeo */
+@keyframes parpadeo {
+  0%, 50%, 100% {
+    opacity: 1; /* La bolita es completamente visible en estos momentos */
+  }
+  25%, 75% {
+    opacity: 0; /* La bolita es invisible en estos momentos */
+  }
+}
+
+/* Estilos CSS */
+.bolita {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(82, 82, 82);
+  border-radius: 50%;
+  animation: parpadeo 0.10s infinite; /* Aplicar la animación de parpadeo */
+}
+
+
